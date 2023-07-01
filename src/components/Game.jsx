@@ -88,25 +88,25 @@ const Game = () => {
     };
 
     return (
-        <Flex bg={green ? 'green.300' : 'gray.300'} borderRadius="md" p={5} direction='column' justify='space-around' align='center' transition="background-color 0.3s ease">
+        <Flex bg={green ? 'green.300' : 'gray.300'} borderRadius="md" p={5} direction='column' justify='center' align='center' transition="background-color 0.3s ease">
             {country && (
                 <Flex p={5} direction='row' justify='center' align='center' wrap='wrap'>
-                    <Flex direction='column' justify='center' align='left'>
-                        <Flex direction='column' justify='space-between' align='left'>
+                    <Flex direction='column' justify='center' align='center'>
+                        <Flex direction='column' justify='space-between' align='center'>
                             <Text as='b' fontSize='3xl' textAlign="left">Global Flag Trivia</Text>
                             <Text as='b' maxW='300px' fontSize='lg' textAlign="left">Reach 10 points if you are able to!</Text>
                             <Spacer p={1}/>
                             <Text fontSize='md' maxW='300px' textAlign="left">Score system: +1 point for correct answers, -1 point for wrong answers. Good luck!</Text>
                         </Flex>
                         <Spacer p={3}/>
-                        <Flex direction='row' justify='space-between' align='centers'>
+                        <Flex direction='row' justify='space-between' align='center'>
                             <Button w='140px' onClick={resetGame}>Start again</Button>
                             <Spacer p={1}/>
                             <Button w='140px'>Points: {score}</Button>
                         </Flex>
                     </Flex>
 
-                    <Spacer p={5}/>
+                    {/* <Spacer p={2}/> */}
 
                     <Flex direction='column' justify='center' align='center'>
                         <Image w='300px' h='300px' objectFit="contain" src={country.flag} alt="Bandera" />

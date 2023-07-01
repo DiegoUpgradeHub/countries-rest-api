@@ -7,14 +7,15 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 const Header = () => {
 
     return (
-        <Flex className="navigation"
+        <Flex
             direction="row"
-            justify="center"
+            w='90%'
+            justify={{base: "flex-end", md: "center"}}
             align="center"
             wrap="wrap"
             m="10px"
         >
-            <Flex hideFrom={'lg'} align='left'>
+            <Flex hideFrom={'md'} align='right' justify='flex-end'>
                 <Menu>
                     <MenuButton
                         as={IconButton}
@@ -46,7 +47,7 @@ const Header = () => {
                     </MenuList>
                 </Menu>
             </Flex>
-            <Flex hideBelow={"lg"}>
+            <Flex hideBelow={"md"}>
                 <Link to="/" className="link">
                 <Button
                     m="10px"

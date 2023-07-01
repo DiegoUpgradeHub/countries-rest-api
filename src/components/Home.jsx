@@ -1,17 +1,57 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 //Chakra ui imports
-import { Box, Text, UnorderedList, ListItem, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Spacer } from "@chakra-ui/react";
+import { Box, Text, UnorderedList, ListItem, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Spacer, Flex } from "@chakra-ui/react";
 
 
 const Home = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <Box justify='left' align='left' maxW='700px'>
+        <Box justify='left' align='left' maxW='700px' p={5}>
             <Text as="b" fontSize="3xl" mb="4">
-            Welcome to the Rest Countries API project developed by Diego Pérez.
+            Welcome to Diego's API Rest Project.
             </Text>
+            <Spacer p={1}/>
+            <Text as="b" fontSize="2xl" mb="4">
+            The Rest Countries API provides detailed information about countries.
+            </Text>
+
+            <Spacer p={3}/>
+
+            <Flex direction='row' wrap='wrap' justify='center' align='center'>
+                <Link to="/game" className="link">
+                    <Button h='60px' w='300px' m={5} borderRadius="md" overflowWrap='break-word'
+                        sx={{
+                            whiteSpace: 'normal',
+                            wordWrap: 'break-word',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                        }}
+                    >
+                        Play Flag's quiz
+                    </Button>
+                </Link>
+                <Link to="/countries" className="link">
+                    <Button h='60px' w='300px' maxWidth='300px' borderRadius="md" overflowWrap='break-word'
+                        sx={{
+                            whiteSpace: 'normal',
+                            wordWrap: 'break-word',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                        }}
+                    >
+                        Check countries list
+                    </Button>
+                </Link>
+            </Flex>
 
             <Spacer p={3}/>
 
