@@ -15,7 +15,7 @@ const Footer = () => {
                 <Text m="2px">Website developed by Diego Pérez</Text>
             </Link>
             <Text m="6px">|</Text>
-            <Link href="https://www.github.com" className="link" isExternal>
+            <Link href="https://github.com/DiegoUpgradeHub/countries-rest-api" className="link" isExternal>
                 <Text m="2px">Check full code here</Text>
             </Link>
         </Flex>
